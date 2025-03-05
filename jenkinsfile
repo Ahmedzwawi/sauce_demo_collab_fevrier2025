@@ -11,6 +11,7 @@ pipeline {
         stage('Vérifier la version de Cypress') {
             steps {
                 sh "npm --version"
+                sh "npm ci"
             }
         }
 
