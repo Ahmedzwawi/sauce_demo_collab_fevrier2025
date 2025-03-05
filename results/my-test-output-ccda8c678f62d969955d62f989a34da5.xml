@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.035" tests="2" failures="0" skipped="2">
+  <testsuite name="Root Suite" timestamp="2025-03-05T13:42:49" tests="0" file="cypress\e2e\productpage.pricesort.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Le tri des produits : Prix" timestamp="2025-03-05T13:42:49" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Page des produits : tri par prix " timestamp="2025-03-05T13:42:49" tests="2" time="0.026" failures="0">
+  </testsuite>
+</testsuites>
