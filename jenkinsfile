@@ -26,7 +26,10 @@ parameters {
 
         stage('Choix de test') {
             steps {
-               script{}
+               script{
+                 def tagToUse = params.TAG ?: params.CHOICE_TAG
+                    sh "npx cypress run --env grepTags=${tagToUse}"
+               }
 
             }
         }
