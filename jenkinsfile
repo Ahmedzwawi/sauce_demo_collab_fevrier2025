@@ -24,13 +24,14 @@ parameters {
             }
         }
 
-        stage('Choix de test') {
+        stage('Exécuter les tests avec Cypress') {
             steps {
-               script{
-                 def tagToUse = params.TAG ?: params.CHOICE_TAG
+                script {
+                    // Si le paramètre TAG est vide, utilise le premier choix de la liste déroulante
+                    def tagToUse = params.TAG ?: params.CHOICE_TAG
+                    // Exécution des tests avec le tag sélectionné
                     sh "npx cypress run --env grepTags=${tagToUse}"
-               }
-
+                }
             }
         }
           stage('exécuter avec junit') {
