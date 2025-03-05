@@ -24,6 +24,13 @@ parameters {
 
             }
         }
+          stage('exécuter avec junit') {
+            steps {
+                // sh 'npx cypress run'
+                sh 'npx cypress run --reporter'
+
+            }
+        }
     }
 post{
         always {
