@@ -9,7 +9,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       require('@cypress/grep/src/plugin')(config);
       grep(on, config);
-      require('cypress-mochawesome-reporter/plugin')(on);// a ajouter
+      // require('cypress-mochawesome-reporter/plugin')(on);// a ajouter
       
       return config;    },
   },
