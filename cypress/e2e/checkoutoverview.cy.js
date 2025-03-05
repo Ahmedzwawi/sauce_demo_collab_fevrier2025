@@ -10,7 +10,7 @@ describe("Test dela page de paiement",{ tags: '@regression' },  () => {
         cy.visit("https://www.saucedemo.com");
         // Étape 1 : Connexion
         loginPage.login("standard_user", "secret_sauce");
-        // Étape 2 : Ajouter un produit au panier
+        // Étape 2 : Ajouter un produit au paniern
         ProductsPage.ajouterProduitAuPanier("sauce-labs-backpack");
         // Étape 3 : Accéder au panier
         ProductsPage.allerAuPanier();

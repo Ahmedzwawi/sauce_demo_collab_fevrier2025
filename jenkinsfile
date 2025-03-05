@@ -5,7 +5,9 @@ pipeline {
             args '--entrypoint=""'  
         }
     }
-
+parameters {
+        string(name: 'TAG', defaultValue: '@regression', description: 'Tag de test')
+    }
 
     stages {
         stage('Vérifier la version de Cypress') {
@@ -24,6 +26,8 @@ pipeline {
 post{
         always {
             archiveArtifacts artifacts: 'cypress/reports/**/*.*', followSymlinks: false
+            junit 'build/reports/**/*.xml'
+
         }
     }
 }
