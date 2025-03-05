@@ -17,14 +17,7 @@ parameters {
                 sh "npm ci"
             }
         }
-        stage('Vérifier la version de Cypress') {
-            steps {
-                sh "npm --version"
-                sh "npm ci"
-            }
-        }
-
-        stage('Exécuter les tests avec Cypress') {
+            stage('Exécuter les tests avec Cypress') {
             steps {
                 script {
                     // Si le paramètre TAG est vide, utilise le premier choix de la liste déroulante
