@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Vérifier la version de Cypress') {
             steps {
-                sh "cypress --version"
+                sh "npm --version"
             }
         }
 
