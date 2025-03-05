@@ -6,7 +6,7 @@ pipeline {
         }
     }
 parameters {
-        string(name: 'String_TAG', defaultValue: 'TC-001', description: 'Tag de test'),
+        string(name: 'String_TAG', defaultValue: '--', description: 'Tag de test'),
         choice(name: 'CHOICE_TAG', choices: ['@regression', '@smoke', '@sanity'], description: 'Sélectionne un tag de test')
     }
 
