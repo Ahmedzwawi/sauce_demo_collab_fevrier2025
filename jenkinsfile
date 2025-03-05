@@ -1,0 +1,24 @@
+pipeline {
+    agent {
+        docker {
+            image "cypress/browsers"
+            args '--entrypoint=""'  
+        }
+    }
+
+
+    stages {
+        stage('Vérifier la version de Cypress') {
+            steps {
+                sh "cypress --version"
+            }
+        }
+
+        stage('Exécuter les tests API avec Cypress') {
+            steps {
+                sh 'npx cypress run'
+            }
+        }
+    }
+
+}
