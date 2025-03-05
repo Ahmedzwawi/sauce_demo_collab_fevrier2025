@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="4.084" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-03-05T12:22:31" tests="0" file="cypress\e2e\productpage.pricesort.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Le tri des produits : Prix" timestamp="2025-03-05T12:22:31" tests="0" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Page des produits : tri par prix " timestamp="2025-03-05T12:22:31" tests="2" time="4.079" failures="0">
+    <testcase name="Le tri des produits : Prix Page des produits : tri par prix  Tri par prix croissant" time="1.395" classname="Tri par prix croissant">
+    </testcase>
+    <testcase name="Le tri des produits : Prix Page des produits : tri par prix  trier par prix décroissant" time="1.155" classname="trier par prix décroissant">
+    </testcase>
+  </testsuite>
+</testsuites>

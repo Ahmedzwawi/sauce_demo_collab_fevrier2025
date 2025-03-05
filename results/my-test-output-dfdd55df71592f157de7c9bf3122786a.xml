@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="5.202" tests="1" failures="0">
+  <testsuite name="Root Suite" timestamp="2025-03-05T12:20:40" tests="0" file="cypress\e2e\checkoutoverview.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Test dela page de paiement" timestamp="2025-03-05T12:20:40" tests="1" time="5.194" failures="0">
+    <testcase name="Test dela page de paiement Vérifier que le prix total est visible" time="3.416" classname="Vérifier que le prix total est visible">
+    </testcase>
+  </testsuite>
+</testsuites>
