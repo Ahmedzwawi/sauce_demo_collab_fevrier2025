@@ -6,7 +6,7 @@ pipeline {
         }
     }
 parameters {
-        string(name: 'String_TAG', defaultValue: '', description: 'Tag de test'),
+        string(name: 'String_TAG', defaultValue: 'TC-001', description: 'Tag de test'),
         choice(name: 'CHOICE_TAG', choices: ['@regression', '@smoke', '@sanity'], description: 'Sélectionne un tag de test')
     }
 
@@ -17,11 +17,16 @@ parameters {
                 sh "npm ci"
             }
         }
-
-        stage('Exécuter les tests API avec Cypress') {
+        stage('Vérifier la version de Cypress') {
             steps {
-                // sh 'npx cypress run'
-                sh "npx cypress run --env grepTags=${params.TAG}"
+                sh "npm --version"
+                sh "npm ci"
+            }
+        }
+
+        stage('Choix de test') {
+            steps {
+               script{}
 
             }
         }
