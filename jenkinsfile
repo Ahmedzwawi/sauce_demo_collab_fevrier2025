@@ -6,7 +6,8 @@ pipeline {
         }
     }
 parameters {
-        string(name: 'TAG', defaultValue: '@TC-001', description: 'Tag de test')
+        string(name: 'String_TAG', defaultValue: '', description: 'Tag de test'),
+        choice(name: 'CHOICE_TAG', choices: ['@regression', '@smoke', '@sanity'], description: 'Sélectionne un tag de test')
     }
 
     stages {
@@ -27,7 +28,7 @@ parameters {
           stage('exécuter avec junit') {
             steps {
                 // sh 'npx cypress run'
-                sh 'npx cypress run --reporter junit '
+                sh 'npx cypress run --reporter junit'
 
 
             }
