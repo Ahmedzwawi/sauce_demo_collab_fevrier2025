@@ -19,14 +19,16 @@ parameters {
 
         stage('Exécuter les tests API avec Cypress') {
             steps {
-                sh 'npx cypress run'
+                // sh 'npx cypress run'
+                sh 'npx cypress run --env grep=${CYPRESS_GREP}'
+
             }
         }
     }
 post{
         always {
             archiveArtifacts artifacts: 'cypress/reports/**/*.*', followSymlinks: false
-            junit 'build/reports/**/*.xml'
+            // junit 'build/reports/**/*.xml'
 
         }
     }
