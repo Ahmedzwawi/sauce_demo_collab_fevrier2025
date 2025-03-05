@@ -29,13 +29,16 @@ parameters {
                 // sh 'npx cypress run'
                 sh 'npx cypress run --reporter junit '
 
+
             }
         }
     }
 post{
         always {
-            archiveArtifacts artifacts: 'cypress/reports/**/*.*', followSymlinks: false
+            // archiveArtifacts artifacts: 'cypress/reports/**/*.*', followSymlinks: false
             junit 'results/**/*.xml'
+                            // junit '**/test-output-*.xml'  // Spécifie où trouver les rapports JUnit
+
 
         }
     }
